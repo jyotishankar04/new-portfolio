@@ -10,7 +10,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { DockData } from "@/utils/db";
-// import { ModeToggle } from "@/components/ui/toggle";
 import { Dock, DockIcon } from "@/components/ui/dock";
 import { BorderBeam } from "./ui/border-beam";
 

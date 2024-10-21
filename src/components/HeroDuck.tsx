@@ -11,23 +11,30 @@ import {
 } from "@/components/ui/tooltip";
 import { DockData } from "@/utils/db";
 import { Dock, DockIcon } from "@/components/ui/dock";
-import { BorderBeam } from "./ui/border-beam";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export function DockDemo() {
   return (
     <TooltipProvider>
-      <Dock direction="middle" magnification={100} className="">
+      <Dock
+        direction="middle"
+        magnification={60}
+        className="border-2 border-purple-600"
+      >
         {Object.entries(DockData.contact.social).map(([name, social]) => (
-          <DockIcon key={name}>
+          <DockIcon
+            key={name}
+            className="bg-black/10 dark:bg-white/10 dp-1"
+            size={60}
+          >
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
                   href={social.url}
                   aria-label={social.name}
                   className={cn(
-                    buttonVariants({ variant: "ghost", size: "icon" }),
+                    buttonVariants({ variant: "secondary", size: "icon" }),
                     "size-12 rounded-full"
                   )}
                   target="_blank"
@@ -41,7 +48,7 @@ export function DockDemo() {
             </Tooltip>
           </DockIcon>
         ))}
-        <BorderBeam size={500} duration={5} delay={0} />
+        {/* <BorderBeam size={500} duration={5} borderWidth={2} delay={0} /> */}
       </Dock>
     </TooltipProvider>
   );

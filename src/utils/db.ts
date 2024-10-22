@@ -87,7 +87,7 @@ const DockData = {
       X: {
         name: "X",
         url: "https://x.com/@JYOTISHANKARP04",
-        icon: Icons.x,
+        icon: TbBrandX,
       },
       email: {
         name: "Send Email",

@@ -33,6 +33,10 @@ export const Icons = {
   instagram: Instagram,
 };
 
+const FaviconData = {
+  url: "https://res.cloudinary.com/djby1yfko/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1721314997/user-profile-images/dlplchlej5ts9cegrmt7.jpg",
+};
+
 const NavMenuDb = [
   {
     title: "Home",
@@ -345,4 +349,4 @@ const socialData = {
   },
 };
 
-export { NavMenuDb, DockData, SkilsDb, ProjectsDb, socialData };
+export { NavMenuDb, DockData, SkilsDb, ProjectsDb, socialData, FaviconData };

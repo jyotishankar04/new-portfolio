@@ -1,9 +1,9 @@
 import React from "react";
-import ShinyButton from "./ui/shiny-button";
 import SparklesText from "./ui/sparkles-text";
 import { SkilsDb } from "@/utils/db";
 import BoxReveal from "./ui/box-reveal";
 import PulsatingButton from "./ui/pulsating-button";
+import { Button } from "./ui/button";
 const About = () => {
   return (
     <div className="w-full mt-52" id="about">
@@ -57,7 +57,12 @@ const About = () => {
               </div>
 
               <div className="mt-10 z-0">
-                <PulsatingButton pulseColor="#7C3AED">
+                <PulsatingButton
+                  pulseColor="#7C3AED"
+                  // style={{ backgroundColor: "#5046e6" }}
+                  duration="2s"
+                  className="bg-purple-600"
+                >
                   <p className="text-lg text-white -z-0">Lets Connect</p>
                 </PulsatingButton>
               </div>
@@ -85,12 +90,16 @@ const SkillsCardFun: React.FC<{
       <div className="lg:flex flex-wrap gap-2 grid grid-cols-2 md:grid-cols-4">
         {skills.map((item) => {
           return (
-            <ShinyButton key={item.name}>
+            <Button
+              variant={"secondary"}
+              className="hover:ring-1 hover:ring-purple-600 hover:text-purple-600 "
+              key={item.name}
+            >
               <div className="flex text-xs xl:text-sm items-center justify-center gap-3">
                 {item.name}
                 <item.icon className="xl:w-6 xl:h-6 w-4 h-4" />
               </div>
-            </ShinyButton>
+            </Button>
           );
         })}
       </div>

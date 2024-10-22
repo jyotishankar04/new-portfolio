@@ -2,7 +2,7 @@ import { ProjectsDb } from "@/utils/db";
 import SparklesText from "./ui/sparkles-text";
 import ProjectCard from "./ProjectCard";
 import Link from "next/link";
-import ShinyButton from "./ui/shiny-button";
+import { Button } from "./ui/button";
 
 const Projects = () => {
   return (
@@ -31,9 +31,12 @@ const Projects = () => {
 
         <div className="w-full  m-10">
           <Link href="/projects">
-            <ShinyButton className="w-full">
+            <Button
+              variant={"outline"}
+              className="w-full hover:shadow-sm  hover:shadow-purple-600/20"
+            >
               <p className="text-sm text-purple-600">View All Projects</p>
-            </ShinyButton>
+            </Button>
           </Link>
         </div>
       </div>

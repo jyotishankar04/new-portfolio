@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { MagicCard } from "./ui/magic-card";
 import Safari from "./ui/safari";
-import ShinyButton from "./ui/shiny-button";
-import AnimatedGradientText from "./ui/animated-gradient-text";
+import { Button } from "./ui/button";
 
 interface ProjectCardProps {
   title: string;
@@ -29,7 +28,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <SkillsCardFun skills={techs} />
         </div>
         <div className="mt-3 w-full">
-          <ShinyButton className="w-full">
+          <Button
+            className="w-full hover:ring-1 hover:ring-purple-600 hover:text-purple-600"
+            variant={"secondary"}
+          >
             <Link
               href={url}
               target="_blank"
@@ -38,7 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             >
               View Project
             </Link>
-          </ShinyButton>
+          </Button>
         </div>
       </div>
       <div></div>
@@ -53,9 +55,13 @@ const SkillsCardFun: React.FC<{
     <div className="flex flex-wrap w-full justify-start items-center    gap-2  ">
       {skills.map((item) => {
         return (
-          <AnimatedGradientText key={item} className=" text-xs m-0">
+          <Button
+            key={item}
+            variant={"outline"}
+            className="rounded-2xl p-1 py-0 text-xs m-0"
+          >
             <span className="whitespace-nowrap text-xs scale-75">{item}</span>
-          </AnimatedGradientText>
+          </Button>
         );
       })}
     </div>

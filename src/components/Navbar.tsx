@@ -10,12 +10,28 @@ import { Menu } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    setTimeout(() => {
+      setIsMenuOpen(false);
+    }, 14000);
+  };
   return (
     <>
-      <div className="fixed top-2 w-full z-[100] 2xl:z-0 h-auto flex justify-center">
+      <div
+        className={`fixed ${
+          isMenuOpen ? "top-0 p-2  h-screen" : "top-2 h-auto"
+        }  w-full z-[100] 2xl:z-0 2xl:h-auto flex justify-center`}
+      >
         <MagicCard
           className={`2xl:w-6/12 duration-200 ease-linear ${
-            isMenuOpen ? "w-full h-screen" : "w-10/12"
+            isMenuOpen ? "w-full h-auto" : "w-10/12"
           }  flex flex-col p-4`}
         >
           <div className="w-full z-50 flex 2xl:flex-row items-center justify-between">
@@ -30,7 +46,12 @@ const Navbar = () => {
                 if (item.title === "Resume")
                   return (
                     <RainbowButton key={item.title} className="scale-75">
-                      <Link href={item.path}>{item.title}</Link>
+                      <Link
+                        onClick={() => setIsMenuOpen(false)}
+                        href={item.path}
+                      >
+                        {item.title}
+                      </Link>
                     </RainbowButton>
                   );
                 return (
@@ -41,15 +62,14 @@ const Navbar = () => {
                     size="sm"
                     asChild
                   >
-                    <Link href={item.path}>{item.title}</Link>
+                    <Link onClick={() => setIsMenuOpen(false)} href={item.path}>
+                      {item.title}
+                    </Link>
                   </Button>
                 );
               })}
             </div>
-            <div
-              className="cursor-pointer 2xl:hidden"
-              onClick={() => setIsMenuOpen((prev) => !prev)}
-            >
+            <div className="cursor-pointer 2xl:hidden" onClick={toggleMenu}>
               <Menu />
             </div>
           </div>
@@ -61,7 +81,11 @@ const Navbar = () => {
             {NavMenuDb.map((item) => {
               if (item.title === "Resume")
                 return (
-                  <Link href={item.path} key={item.title}>
+                  <Link
+                    onClick={() => setIsMenuOpen(false)}
+                    href={item.path}
+                    key={item.title}
+                  >
                     <RainbowButton key={item.title} className="scale-75">
                       {item.title}
                     </RainbowButton>

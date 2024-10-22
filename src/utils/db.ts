@@ -22,6 +22,7 @@ import {
   TbBrandTailwind,
   TbBrandVscode,
   TbBrandReddit,
+  TbBrandX,
 } from "react-icons/tb";
 import { FaCss3 } from "react-icons/fa";
 
@@ -330,7 +331,7 @@ const socialData = {
   X: {
     name: "X",
     url: "https://x.com/@JYOTISHANKARP04",
-    icon: Icons.x,
+    icon: TbBrandX,
   },
   email: {
     name: "Send Email",

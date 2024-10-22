@@ -5,6 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 import { cn } from "@/lib/utils";
+import { MotionValue } from "framer-motion";
 
 export interface DockProps extends VariantProps<typeof dockVariants> {
   className?: string;
@@ -73,14 +74,13 @@ export interface DockIconProps {
   size?: number;
   magnification?: number;
   distance?: number;
-  mouseX?: any;
+  mouseX?: MotionValue<number>;
   className?: string;
   children?: React.ReactNode;
   props?: PropsWithChildren;
 }
 
 const DockIcon = ({
-  size,
   magnification = DEFAULT_MAGNIFICATION,
   distance = DEFAULT_DISTANCE,
   mouseX,
@@ -96,13 +96,13 @@ const DockIcon = ({
     return val - bounds.x - bounds.width / 2;
   });
 
-  let widthSync = useTransform(
+  const widthSync = useTransform(
     distanceCalc,
     [-distance, 0, distance],
     [40, magnification, 40]
   );
 
-  let width = useSpring(widthSync, {
+  const width = useSpring(widthSync, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,

@@ -83,7 +83,8 @@ export interface DockIconProps {
 const DockIcon = ({
   magnification = DEFAULT_MAGNIFICATION,
   distance = DEFAULT_DISTANCE,
-  mouseX,
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  mouseX = useMotionValue(0),
   className,
   children,
   ...props

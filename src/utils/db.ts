@@ -46,22 +46,22 @@ const NavMenuDb = [
   },
   {
     title: "About",
-    path: "#about",
+    path: "/#about",
     varient: "link",
   },
   {
     title: "Projects",
-    path: "#projects",
+    path: "/#projects",
     varient: "link",
   },
   {
     title: "Repos",
-    path: "#repos",
+    path: "/#repos",
     varient: "link",
   },
   {
     title: "Contact",
-    path: "#contact",
+    path: "/#contact",
     varient: "link",
   },
   {

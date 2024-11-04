@@ -28,19 +28,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <SkillsCardFun skills={techs} />
         </div>
         <div className="mt-3 w-full">
-          <Button
-            className="w-full hover:ring-1 hover:ring-purple-600 hover:text-purple-600"
-            variant={"secondary"}
-          >
             <Link
               href={url}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-purple-600"
             >
+          <Button
+            className="w-full hover:ring-1 hover:ring-purple-600 hover:text-purple-600"
+            variant={"secondary"}
+          >
               View Project
+            </Button>
             </Link>
-          </Button>
         </div>
       </div>
       <div></div>

@@ -17,6 +17,7 @@ const Navbar = () => {
       setIsMenuOpen(false);
     }, 14000);
   };
+
   return (
     <>
       <div
@@ -57,7 +58,12 @@ const Navbar = () => {
                     size="sm"
                     asChild
                   >
-                    <Link onClick={() => setIsMenuOpen(false)} href={item.path}>
+                    <Link
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                      }}
+                      href={item.path}
+                    >
                       {item.title}
                     </Link>
                   </Button>

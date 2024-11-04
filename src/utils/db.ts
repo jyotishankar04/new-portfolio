@@ -55,8 +55,8 @@ const NavMenuDb = [
     varient: "link",
   },
   {
-    title: "Repos",
-    path: "/#repos",
+    title: "Stats",
+    path: "/stats",
     varient: "link",
   },
   {
@@ -210,12 +210,25 @@ const SkilsDb = {
 
 const ProjectsDb = [
   {
+    id: "nexgpt",
+    title: "Nex GPT",
+    description: "A chat bot project using google gemini",
+    source: {
+      frontend: "https://github.com/jyotishankar04/s-gpt/",
+      backend: "https://github.com/jyotishankar04/s-gpt/",
+    },
+    live: "https://devsuvam.xyz",
+    image: "https://res.cloudinary.com/djby1yfko/image/upload/v1730103189/Screenshot_from_2024-10-28_13-40-00_uvycvz.png",
+    stacks: ["Next js", "Postgres", "Gemini", "Tailwind", "Prisma", "Typescript", "Hono", "Cloudflare"],
+
+  },
+  {
     id: "expense-tracker",
     title: "Expense Mate",
     description: " A simple expense tracker app using nextjs and postgres",
     sourse: {
-      client: "https://github.com/jyotishankar04/expense-tracker",
-      server: "https://github.com/jyotishankar04/expense-tracker",
+      fronted: "https://github.com/jyotishankar04/expense-tracker",
+      backend: "https://github.com/jyotishankar04/expense-tracker",
     },
     live: "https://expensemate.devsuvam.xyz",
     image:

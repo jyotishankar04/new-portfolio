@@ -31,19 +31,19 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <div className="relative">
-            <div className="fixed top-0 left-0 w-full z-50">
+          <div className="relative h-screen flex flex-col justify-start items-center">
+            <div className="sticky top-0 w-full z-50">
               {" "}
               {/* Increased z-index */}
               <Navbar />
             </div>
-            <div className="pt-[0px]  ">
+            <div className="pt-[0px] w-full h-full">
               {" "}
               {/* Adjusted padding to avoid overlap */}
               {children}
             </div>
 
-            <Footer />
+            {/*<Footer />*/}
           </div>
         </ThemeProvider>
       </body>

@@ -64,11 +64,6 @@ const NavMenuDb = [
     path: "/#contact",
     varient: "link",
   },
-  {
-    title: "Resume",
-    path: "/resume",
-    varient: "default",
-  },
 ];
 
 const DockData = {
@@ -218,9 +213,18 @@ const ProjectsDb = [
       backend: "https://github.com/jyotishankar04/s-gpt/",
     },
     live: "https://devsuvam.xyz",
-    image: "https://res.cloudinary.com/djby1yfko/image/upload/v1730103189/Screenshot_from_2024-10-28_13-40-00_uvycvz.png",
-    stacks: ["Next js", "Postgres", "Gemini", "Tailwind", "Prisma", "Typescript", "Hono", "Cloudflare"],
-
+    image:
+      "https://res.cloudinary.com/djby1yfko/image/upload/v1730103189/Screenshot_from_2024-10-28_13-40-00_uvycvz.png",
+    stacks: [
+      "Next js",
+      "Postgres",
+      "Gemini",
+      "Tailwind",
+      "Prisma",
+      "Typescript",
+      "Hono",
+      "Cloudflare",
+    ],
   },
   {
     id: "expense-tracker",

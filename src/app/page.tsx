@@ -6,12 +6,13 @@ import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
-    <div className="w-full  p-2  gap-2">
-      <Lader />
-      <GridPatternLinearGradient />
-      <About />
-      <Projects />
-      <Contact />
+    <div className="w-fullp-2 bg-background  gap-2">
+      <Lader>
+        <GridPatternLinearGradient />
+        <About />
+        <Projects />
+        <Contact />
+      </Lader>
     </div>
   );
 }

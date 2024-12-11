@@ -7,6 +7,7 @@ import { NavMenuDb } from "@/utils/db";
 import { MagicCard } from "./ui/magic-card";
 import { useState } from "react";
 import { Menu } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,8 +70,15 @@ const Navbar = () => {
                   </Button>
                 );
               })}
+              <div className="flex items-center gap-2 w-fit">
+                <ThemeToggle />
+              </div>
             </div>
-            <div className="cursor-pointer 2xl:hidden" onClick={toggleMenu}>
+            <div
+              className="cursor-pointer 2xl:hidden flex items-center gap-3"
+              onClick={toggleMenu}
+            >
+              <ThemeToggle />
               <Menu />
             </div>
           </div>

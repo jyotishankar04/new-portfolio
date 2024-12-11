@@ -15,22 +15,20 @@ const Projects = () => {
           current skills mostly in terms of programming and technology
         </p>
         <div className="grid grid-rows-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5 mt-10">
-          {ProjectsDb.map((item,index) => {
-            if(index <= 5) {
-
+          {ProjectsDb.map((item, index) => {
+            if (index <= 5) {
               return (
-                  <ProjectCard
-                      key={item.title}
-                      desc={item.description}
-                      img={item.image}
-                      techs={item.stacks}
-                      title={item.title}
-                      url={item.id}
-                  />
+                <ProjectCard
+                  key={item.title}
+                  desc={item.description}
+                  img={item.image}
+                  techs={item.stacks}
+                  title={item.title}
+                  url={item.id}
+                />
               );
             }
-          })
-          }
+          })}
         </div>
 
         <div className="w-full  m-10">

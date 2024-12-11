@@ -10,7 +10,7 @@ export function GridPatternLinearGradient() {
   return (
     <div
       id={"#"}
-      className="w-full relative h-screen flex flex-col justify-start items-center"
+      className="w-full  relative h-screen flex flex-col justify-start items-center"
     >
       <div className="grow z-0 flex flex-col items-center gap-5 justify-center">
         <h1 className="xl:text-4xl text-3xl font-bold text-purple-600">
